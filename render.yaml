@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: payment-site
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: MPESA_ENV
+        value: sandbox
+      - key: CURRENCY
+        value: KES
+      - key: MIN_AMOUNT
+        value: "10"
+      # Add secret values in Render Dashboard:
+      # MPESA_CONSUMER_KEY, MPESA_CONSUMER_SECRET,
+      # MPESA_SHORTCODE, MPESA_PASSKEY,
+      # PAYSTACK_SECRET_KEY, PAYSTACK_PUBLIC_KEY,
+      # TELEGRAM_BOT_TOKEN, TELEGRAM_OWNER_CHAT_ID,
+      # BASE_URL

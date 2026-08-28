@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Secure Payment</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="wrap">
+  <section class="card">
+    <div class="badge">SECURE CHECKOUT</div>
+    <h1>Make a Payment</h1>
+    <p class="muted">Pay securely using M-Pesa or a card.</p>
+
+    <label>Name</label>
+    <input id="name" placeholder="Your name" autocomplete="name">
+
+    <label>Email</label>
+    <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
+
+    <label>M-Pesa phone</label>
+    <input id="phone" inputmode="tel" placeholder="07XXXXXXXX" autocomplete="tel">
+
+    <label>Amount (KES)</label>
+    <input id="amount" type="number" min="10" step="1" placeholder="100">
+
+    <button id="mpesa" class="primary">📱 Pay with M-Pesa</button>
+    <button id="card" class="secondary">💳 Pay with Card</button>
+
+    <div id="message" class="message"></div>
+    <p class="tiny">Your card details are entered on the secure payment provider checkout. This website does not store card numbers.</p>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
